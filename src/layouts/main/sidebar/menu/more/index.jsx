@@ -1,5 +1,6 @@
 import {Popover, Disclosure} from "@headlessui/react";
 import {Link} from "react-router-dom";
+import classNames from "classnames";
 
 export default function More() {
     return (
@@ -37,31 +38,42 @@ export default function More() {
                 </button>
 
                 <Disclosure>
-                    <Disclosure.Button className="h-[52px] flex items-center justify-between w-full px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
-                        Creator Studio
-                        <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
-                            <path
-                                fill="currentColor"
-                                d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
-                            />
-                        </svg>
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="text-gray-500">
-                        <Link to="/" className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors text-white">
-                            <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
-                                <path
-                                    fill="currentColor"
-                                    d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"
-                                />
-                            </svg>
-                            Analytics
-                        </Link>
-                    </Disclosure.Panel>
+                    {({open})=>(
+                        <>
+                            <Disclosure.Button className="h-[52px] flex items-center justify-between w-full px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
+                                Creator Studio
+                                <svg className={classNames("transition-all", {
+                                    "rotate-180 text-[#1d9bf0]" : open
+                                })} viewBox="0 0 24 24" width={18.75} height={18.75}>
+                                    <path
+                                        fill="currentColor"
+                                        d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
+                                    />
+                                </svg>
+                            </Disclosure.Button>
+                            <Disclosure.Panel className="text-gray-500">
+                                <Link to="/" className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[#eff3f41a] transition-colors text-white">
+                                    <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+                                        <path
+                                            fill="currentColor"
+                                            d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"
+                                        />
+                                    </svg>
+                                    Analytics
+                                </Link>
+                            </Disclosure.Panel>
+                        </>
+                    )}
+
                 </Disclosure>
                 <Disclosure>
+                    {({open})=>(
+                        <>
                     <Disclosure.Button className="h-[52px] flex items-center justify-between w-full px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
                         Professional Tool
-                        <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+                        <svg className={classNames("transition-all", {
+                            "rotate-180 text-[#1d9bf0]" : open
+                        })} viewBox="0 0 24 24" width={18.75} height={18.75}>
                             <path
                                 fill="currentColor"
                                 d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
@@ -79,11 +91,17 @@ export default function More() {
                             Ads
                         </Link>
                     </Disclosure.Panel>
+                    </>
+                    )}
                 </Disclosure>
                 <Disclosure>
+                    {({open})=>(
+                        <>
                     <Disclosure.Button className="h-[52px] flex items-center justify-between w-full px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
                         Settings and Support
-                        <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+                        <svg className={classNames("transition-all", {
+                            "rotate-180 text-[#1d9bf0]" : open
+                        })} viewBox="0 0 24 24" width={18.75} height={18.75}>
                             <path
                                 fill="currentColor"
                                 d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
@@ -128,6 +146,8 @@ export default function More() {
                             Keyboard shortcuts
                         </Link>
                     </Disclosure.Panel>
+                     </>
+                    )}
                 </Disclosure>
             </Popover.Panel>
         </Popover>
