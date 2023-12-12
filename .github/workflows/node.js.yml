@@ -33,6 +33,8 @@ jobs:
 
     - name: Deploy with gh-pages
       run: |
+        git config --global user.email "seymuram@code.edu.az"
+        git config --global user.name "Seymu1R"
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
