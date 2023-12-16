@@ -1,16 +1,19 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-
-    currentAccount : false,
+    currentAccount : {
+        id : 1,
+        userName : "Seymu1R_",
+        avatar : "https://pbs.twimg.com/profile_images/1558892904537591809/FxgUOFSn_400x400.jpg",
+        tag:"Seymour"
+    },
     accounts : []
-
 }
 const  auth = createSlice({
     name : 'auth',
     initialState,
     reducers:{
-        //methods manipilation
+        //methods manipulation
         _addAccount:(state,action)=>{
           state.actions.push(action.payload)
         },

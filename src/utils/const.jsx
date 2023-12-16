@@ -1,3 +1,6 @@
+import store from "../store/index.js";
+let states = store.getState();
+
 export const mainMenu = [
     {
         path: '/',
@@ -90,7 +93,7 @@ export const mainMenu = [
     },
     {
         path: '/lists',
-        title: 'List',
+        title: 'Lists',
         icon: {
             active: (
                 <svg viewBox="0 0 24 24" width={26.25} height={26.25}>
@@ -155,7 +158,7 @@ export const mainMenu = [
         }
     },
     {
-        path: '/profile',
+        path: `/${states?.auth?.currentAccount?.userName}`,
         title: 'Profil',
         icon: {
             active: (
