@@ -12,6 +12,7 @@ export default function More({ close }) {
             {accounts.map(account => (
                 <button
                     type="button"
+                    key={account.id}
                     disabled={currentAccount.id === account.id}
                     onClick={() => {
                         setCurrentAccount(account)
@@ -25,7 +26,7 @@ export default function More({ close }) {
                     <div className="mx-3 flex-1 text-[15px]">
                         <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
                         <div className="text-[#71767b]">
-                            @{account.username}
+                            @{account.userName}
                         </div>
                     </div>
                     {currentAccount.id === account.id && (
@@ -40,16 +41,16 @@ export default function More({ close }) {
             <div className="h-px bg-[#2f3336] my-3"/>
             <button
                 className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold leading-[20px]">
-                Var olan bir hesap ekle
+                Add an existing account
             </button>
             <button
                 className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold leading-[20px]">
-                Hesapları yönet
+                Manage accounts
             </button>
             <button
                 className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full text-[#e7e9ea] text-[15px] font-bold leading-[20px]">
                 <div className="max-w-[228px]">
-                    @prototurkcom hesabından çıkış yap
+                    Log out @{currentAccount.userName}
                 </div>
             </button>
         </>

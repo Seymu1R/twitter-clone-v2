@@ -1,5 +1,4 @@
 import store from "../store/index.js";
-let states = store.getState();
 
 export const mainMenu = [
     {
@@ -158,7 +157,9 @@ export const mainMenu = [
         }
     },
     {
-        path: `/${states?.auth?.currentAccount?.userName}`,
+        path: () => {
+            return `/${store.getState()?.auth?.currentAccount?.userName}`
+        },
         title: 'Profil',
         icon: {
             active: (
