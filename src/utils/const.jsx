@@ -9,8 +9,7 @@ export const mainMenu = [
                 <svg viewBox="0 0 24 24" width={26.25} height={26.25} className="block">
                     <path
                         fill="#fff"
-                        d="M12 1.696L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM12 16.5c-1.933 0-3.5-1.567-3.5-3.5s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5z"
-                    />
+                        d="M21.591 7.146L12.52 1.157c-.316-.21-.724-.21-1.04 0l-9.071 5.99c-.26.173-.409.456-.409.757v13.183c0 .502.418.913.929.913H9.14c.51 0 .929-.41.929-.913v-7.075h3.909v7.075c0 .502.417.913.928.913h6.165c.511 0 .929-.41.929-.913V7.904c0-.301-.158-.584-.408-.758z"/>
                 </svg>
             ),
             passive: (
@@ -179,5 +178,68 @@ export const mainMenu = [
                 </svg>
             )
         }
+    }
+]
+
+export const topics = [
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'tag',
+            value: 'dilanpolat'
+        }
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'query',
+            value: 'Starlink'
+        },
+        postCount: 15640
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'tag',
+            value: 'dilanpolat'
+        }
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'query',
+            value: 'Starlink'
+        },
+        postCount: 15640
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'tag',
+            value: 'dilanpolat'
+        }
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'query',
+            value: 'Starlink'
+        },
+        postCount: 15640
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'tag',
+            value: 'dilanpolat'
+        }
+    },
+    {
+        title: 'Türkiye tarihinde gündemde',
+        topic: {
+            type: 'query',
+            value: 'Starlink'
+        },
+        postCount: 15640
     }
 ]

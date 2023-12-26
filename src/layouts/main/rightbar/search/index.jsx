@@ -16,8 +16,10 @@ export default function Search() {
             ref={ref}
             className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 bg-black z-10"
         >
-            <label className="h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:bg-black focus-within:border-[#1d9bf0]">
-                <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
+            <label
+                className="h-[43px] rounded-full bg-[#202327] w-full relative group border border-transparent focus-within:bg-black focus-within:border-[#1d9bf0]">
+                <div
+                    className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
                     <svg
                         viewBox="0 0 24 24"
                         height={18.75}
@@ -31,7 +33,7 @@ export default function Search() {
                 </div>
                 <input
                     type="text"
-                    placeholder="Ara"
+                    placeholder="Search"
                     className="w-full h-full bg-transparent placeholder-[#71767b] rounded-full outline-none pl-[56px] text-[15px]"
                     value={query}
                     onFocus={() => setFocus(true)}
